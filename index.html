@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Xeno Games is a Discord gaming bot featuring trivia, economy, rewards and games.">
+    <meta name="description"
+          content="Xeno Games — a Discord gaming hub featuring games, events, rewards and Xeno Coins.">
 
-    <title>Xeno Games — Discord Gaming Bot</title>
+    <title>Xeno Games — Discord Gaming Hub</title>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+<div class="scanline"></div>
 
 <nav class="navbar">
     <div class="nav-inner">
@@ -21,14 +26,18 @@
         </a>
 
         <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
             <a href="features.html">Features</a>
             <a href="commands.html">Commands</a>
-            <a href="maintenance.html">Donate</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1537692246218899456"
-   target="_blank"
-   class="nav-cta"
-   style="position:relative; z-index:9999; pointer-events:auto;">
-   Add to Discord
+            <a href="donate.html">Support</a>
+
+            <a
+                href="https://discord.com/oauth2/authorize?client_id=1537692246218899456"
+                target="_blank"
+                rel="noopener"
+                class="nav-cta"
+            >
+                Add to Discord
             </a>
         </div>
 
@@ -38,155 +47,329 @@
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
     <div class="container">
 
-        <div class="hero-content">
+        <div class="hero-content reveal">
 
             <div class="status">
                 <span class="status-dot"></span>
-                Free &amp; community focused
+                XENO SYSTEM ONLINE
             </div>
 
-            <span class="eyebrow">Discord Gaming Bot</span>
+            <span class="eyebrow">DISCORD GAMING HUB</span>
 
             <h1>
-                Make your server
-                <span>more fun.</span>
+                Your server.
+                <span>Your games.</span>
             </h1>
 
             <p class="hero-description">
-                Xeno Games brings trivia, games, rewards and a community
-                economy together in one Discord bot.
+                Xeno Games turns your Discord server into a place for
+                games, events, rewards, competition and Xeno Coins.
             </p>
 
             <div class="buttons">
-                <a href="https://discord.com/oauth2/authorize?client_id=1537692246218899456" class="btn btn-primary">
+
+                <a
+                    href="https://discord.com/oauth2/authorize?client_id=1537692246218899456"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary pulse-button"
+                >
+                    Add Xeno to Discord
+                </a>
+
+                <a href="features.html" class="btn btn-secondary">
+                    Explore Xeno
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat">
+                    <strong data-count="6">0</strong>
+                    <span>Live Events</span>
+                </div>
+
+                <div class="stat">
+                    <strong data-count="3">0</strong>
+                    <span>Games</span>
+                </div>
+
+                <div class="stat">
+                    <strong data-count="∞">∞</strong>
+                    <span>Possibilities</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-orbit">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="xeno-core">
+                <span>✦</span>
+            </div>
+
+            <div class="floating-symbol symbol-one">🪙</div>
+            <div class="floating-symbol symbol-two">⚡</div>
+            <div class="floating-symbol symbol-three">🎮</div>
+            <div class="floating-symbol symbol-four">💎</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- AD -->
+
+<div class="container reveal">
+    <div class="ad-slot">
+        Advertisement
+    </div>
+</div>
+
+
+<!-- QUICK CATEGORIES -->
+
+<section class="section compact-section">
+    <div class="container">
+
+        <div class="section-header reveal">
+            <span class="eyebrow">THE XENO SYSTEM</span>
+
+            <h2>More than commands.</h2>
+
+            <p>
+                Xeno is built around gameplay. Jump into a game,
+                join an event or build your Xeno Coin balance.
+            </p>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="features.html#games" class="category-card reveal">
+                <div class="category-icon">🎮</div>
+                <div>
+                    <span>PLAY</span>
+                    <h3>Games</h3>
+                    <p>Trivia, Coinflip and RPS.</p>
+                </div>
+                <b>→</b>
+            </a>
+
+            <a href="features.html#events" class="category-card reveal">
+                <div class="category-icon">⚡</div>
+                <div>
+                    <span>EXPERIENCE</span>
+                    <h3>Events</h3>
+                    <p>Server-wide events and battles.</p>
+                </div>
+                <b>→</b>
+            </a>
+
+            <a href="features.html#economy" class="category-card reveal">
+                <div class="category-icon">🪙</div>
+                <div>
+                    <span>COMPETE</span>
+                    <h3>Economy</h3>
+                    <p>Earn, spend and compete.</p>
+                </div>
+                <b>→</b>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FEATURED EVENTS -->
+
+<section class="section event-section">
+    <div class="container">
+
+        <div class="section-header split-header reveal">
+
+            <div>
+                <span class="eyebrow">LIVE EVENT SYSTEM</span>
+                <h2>Something is always happening.</h2>
+            </div>
+
+            <a href="features.html#events" class="text-link">
+                View all events →
+            </a>
+
+        </div>
+
+        <div class="event-grid">
+
+            <div class="event-card temporal reveal">
+                <div class="event-top">
+                    <span class="event-icon">⚡</span>
+                    <span class="event-tag">INVESTIGATION</span>
+                </div>
+
+                <h3>Temporal Distortion</h3>
+
+                <p>
+                    Investigate strange temporal anomalies and
+                    uncover rare discoveries.
+                </p>
+
+                <div class="event-footer">
+                    <span>💰 Up to 300K+</span>
+                    <span>10 MIN</span>
+                </div>
+            </div>
+
+
+            <div class="event-card meteor reveal">
+                <div class="event-top">
+                    <span class="event-icon">☄️</span>
+                    <span class="event-tag">CATCH</span>
+                </div>
+
+                <h3>Meteor Shower</h3>
+
+                <p>
+                    Catch falling meteors and hunt for the rare
+                    Golden Meteor.
+                </p>
+
+                <div class="event-footer">
+                    <span>💰 Up to 300K</span>
+                    <span>10 MIN</span>
+                </div>
+            </div>
+
+
+            <div class="event-card boss reveal">
+                <div class="event-top">
+                    <span class="event-icon">👹</span>
+                    <span class="event-tag">BATTLE</span>
+                </div>
+
+                <h3>Boss Rush</h3>
+
+                <p>
+                    Join other players as the battle plays out
+                    through an automated cinematic fight.
+                </p>
+
+                <div class="event-footer">
+                    <span>⚔️ 60 SEC BATTLE</span>
+                    <span>5K HP</span>
+                </div>
+            </div>
+
+
+            <div class="event-card gamble reveal">
+                <div class="event-top">
+                    <span class="event-icon">🎰</span>
+                    <span class="event-tag">GAMBLE</span>
+                </div>
+
+                <h3>Xeno Gamble</h3>
+
+                <p>
+                    Take your chance at massive rewards.
+                    One gamble. One result.
+                </p>
+
+                <div class="event-footer">
+                    <span>💎 Up to 1M</span>
+                    <span>2 MIN</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ECONOMY -->
+
+<section class="section">
+    <div class="container">
+
+        <div class="economy-panel reveal">
+
+            <div class="economy-content">
+
+                <span class="eyebrow">XENO ECONOMY</span>
+
+                <h2>
+                    Build your
+                    <span>Xeno balance.</span>
+                </h2>
+
+                <p>
+                    Earn Xeno Coins through games and events,
+                    claim daily rewards, compete on the leaderboard
+                    and send coins to other players.
+                </p>
+
+                <div class="economy-pills">
+                    <span>🪙 Xeno Coins</span>
+                    <span>🎁 Daily Rewards</span>
+                    <span>🏆 Leaderboards</span>
+                    <span>🎟️ Redeem Codes</span>
+                </div>
+
+            </div>
+
+            <div class="coin-display">
+                <div class="coin-glow"></div>
+                <div class="coin">X</div>
+                <span>XENO COINS</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="section">
+    <div class="container">
+
+        <div class="cta-panel reveal">
+
+            <span class="eyebrow">READY?</span>
+
+            <h2>Bring Xeno to your server.</h2>
+
+            <p>
+                Games, events and rewards are waiting.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="https://discord.com/oauth2/authorize?client_id=1537692246218899456"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary"
+                >
                     Add to Discord
                 </a>
 
                 <a href="commands.html" class="btn btn-secondary">
-                    View Commands
+                    Browse Commands
                 </a>
-            </div>
 
-        </div>
-
-    </div>
-</section>
-
-
-<div class="container">
-    <div class="ad-slot">
-        Advertisement
-    </div>
-</div>
-
-
-<section class="section">
-    <div class="container">
-
-        <div class="section-header">
-            <span class="eyebrow">What it does</span>
-
-            <h2>Built for community servers.</h2>
-
-            <p>
-                Xeno Games focuses on simple games and community features
-                that are easy to use without turning your server into a
-                complicated mess. This Bot is not associated with Xeno Team.
-            </p>
-        </div>
-
-
-        <div class="grid">
-
-            <div class="card">
-                <div class="card-icon">🧠</div>
-                <h3>DBL Trivia</h3>
-                <p>
-                    Challenge yourself or another player with Dragon Ball
-                    Legends trivia.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">💠</div>
-                <h3>Xeno Economy</h3>
-                <p>
-                    Earn, transfer and compete for Xeno Coins through
-                    different activities.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🎁</div>
-                <h3>Daily Rewards</h3>
-                <p>
-                    Give members a reason to return every day and keep
-                    their coin balance growing.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🎟️</div>
-                <h3>Redeem Codes</h3>
-                <p>
-                    Redeem reward codes for events, giveaways and
-                    community milestones.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🪙</div>
-                <h3>Coinflip</h3>
-                <p>
-                    Put your Xeno Coins on the line and see which side
-                    the coin chooses.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">🪨</div>
-                <h3>RPS</h3>
-                <p>
-                    Play Rock Paper Scissors against the bot and compete
-                    for Xeno Coins.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<div class="container">
-    <div class="ad-slot">
-        Advertisement
-    </div>
-</div>
-
-
-<section class="section">
-    <div class="container">
-
-        <div class="info-panel">
-
-            <span class="eyebrow">Free to use</span>
-
-            <h2>Xeno Games is built for fun.</h2>
-
-            <p>
-                The core bot is designed to remain accessible to the
-                community. If you enjoy using Xeno Games, you can also
-                support its development.
-            </p>
-
-            <div class="buttons" style="margin-top: 22px;">
-                <a href="maintenance.html" class="btn btn-primary">
-                    Support Xeno Games
-                </a>
             </div>
 
         </div>
@@ -207,11 +390,14 @@
         <div class="footer-links">
             <a href="features.html">Features</a>
             <a href="commands.html">Commands</a>
-            <a href="maintenance.html">Donate</a>
+            <a href="donate.html">Support</a>
         </div>
 
     </div>
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
