@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Xeno Games Discord bot command list.">
+    <meta name="description"
+          content="Xeno Games Discord bot commands.">
 
     <title>Commands — Xeno Games</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
 
 <nav class="navbar">
     <div class="nav-inner">
@@ -21,10 +25,19 @@
         </a>
 
         <div class="nav-links">
+            <a href="index.html">Home</a>
             <a href="features.html">Features</a>
             <a href="commands.html" class="active">Commands</a>
-            <a href="maintenance.html">Donate</a>
-            <a href="https://discord.com/oauth2/authorize?client_id=1537692246218899456" class="nav-cta">Add to Discord</a>
+            <a href="donate.html">Support</a>
+
+            <a
+                href="https://discord.com/oauth2/authorize?client_id=1537692246218899456"
+                target="_blank"
+                rel="noopener"
+                class="nav-cta"
+            >
+                Add to Discord
+            </a>
         </div>
 
     </div>
@@ -34,108 +47,256 @@
 <main>
 
 <section class="page-hero">
-    <div class="container">
+    <div class="container reveal">
 
-        <span class="eyebrow">Command Center</span>
+        <span class="eyebrow">COMMAND CENTER</span>
 
-        <h1>Xeno Games commands.</h1>
+        <h1>
+            Control the
+            <span>Xeno system.</span>
+        </h1>
 
         <p>
-            Everything currently available through the bot.
+            Browse the commands currently available through Xeno Games.
         </p>
 
     </div>
 </section>
 
 
-<div class="container">
-    <div class="ad-slot">
-        Advertisement
-    </div>
-</div>
-
-
 <section class="section">
     <div class="container">
 
-        <div class="command-list">
 
-            <div class="command">
-                <span class="command-name">/trivia</span>
-                <span class="command-description">
-                    Start a DBL trivia game.
-                </span>
+        <!-- GAMES -->
+
+        <div class="command-category reveal">
+
+            <div class="category-heading">
+                <span class="category-heading-icon">🎮</span>
+
+                <div>
+                    <span class="eyebrow">GAMES</span>
+                    <h2>Play</h2>
+                </div>
             </div>
 
-            <div class="command">
-                <span class="command-name">/daily</span>
-                <span class="command-description">
-                    Claim your daily Xeno Coins.
-                </span>
+            <div class="command-list">
+
+                <div class="command">
+                    <span class="command-name">/trivia</span>
+                    <span class="command-description">
+                        Start a DBL trivia game.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/coinflip</span>
+                    <span class="command-description">
+                        Bet Xeno Coins on Heads or Tails.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/rps</span>
+                    <span class="command-description">
+                        Play Rock Paper Scissors against the bot.
+                    </span>
+                </div>
+
             </div>
 
-            <div class="command">
-                <span class="command-name">/redeem</span>
-                <span class="command-description">
-                    Redeem a reward code.
-                </span>
+        </div>
+
+
+        <!-- ECONOMY -->
+
+        <div class="command-category reveal">
+
+            <div class="category-heading">
+                <span class="category-heading-icon">🪙</span>
+
+                <div>
+                    <span class="eyebrow">ECONOMY</span>
+                    <h2>Xeno Coins</h2>
+                </div>
             </div>
 
-            <div class="command">
-                <span class="command-name">/balance</span>
-                <span class="command-description">
-                    Check your Xeno Coin balance.
-                </span>
+            <div class="command-list">
+
+                <div class="command">
+                    <span class="command-name">/daily</span>
+                    <span class="command-description">
+                        Claim your daily Xeno Coins.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/balance</span>
+                    <span class="command-description">
+                        Check your Xeno Coin balance.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/profile</span>
+                    <span class="command-description">
+                        View a player's Xeno profile and statistics.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/leaderboard</span>
+                    <span class="command-description">
+                        View the richest Xeno Coin players.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/pay</span>
+                    <span class="command-description">
+                        Send Xeno Coins to another player.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/redeem</span>
+                    <span class="command-description">
+                        Redeem a reward code.
+                    </span>
+                </div>
+
             </div>
 
-            <div class="command">
-                <span class="command-name">/profile</span>
-                <span class="command-description">
-                    View a player's Xeno Games profile.
-                </span>
+        </div>
+
+
+        <!-- EVENTS -->
+
+        <div class="command-category reveal">
+
+            <div class="category-heading">
+                <span class="category-heading-icon">⚡</span>
+
+                <div>
+                    <span class="eyebrow">EVENTS</span>
+                    <h2>Event System</h2>
+                </div>
             </div>
 
-            <div class="command">
-                <span class="command-name">/leaderboard</span>
-                <span class="command-description">
-                    View the richest Xeno Coin players.
-                </span>
+            <div class="command-list">
+
+                <div class="command">
+                    <span class="command-name">/event start</span>
+                    <span class="command-description">
+                        Start a selected Xeno event.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/event stop</span>
+                    <span class="command-description">
+                        Stop the currently active event.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/event settings</span>
+                    <span class="command-description">
+                        Configure the event system.
+                    </span>
+                </div>
+
             </div>
 
-            <div class="command">
-                <span class="command-name">/pay</span>
-                <span class="command-description">
-                    Send Xeno Coins to another player.
-                </span>
+        </div>
+
+
+        <!-- RAID -->
+
+        <div class="command-category reveal">
+
+            <div class="category-heading">
+                <span class="category-heading-icon">🐉</span>
+
+                <div>
+                    <span class="eyebrow">RAID</span>
+                    <h2>Xeno Raid</h2>
+                </div>
             </div>
 
-            <div class="command">
-                <span class="command-name">/coinflip</span>
-                <span class="command-description">
-                    Bet Xeno Coins on Heads or Tails.
-                </span>
+            <div class="command-list">
+
+                <div class="command">
+                    <span class="command-name">/event raid start</span>
+                    <span class="command-description">
+                        Start a Xeno Raid lobby.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/event raid launch</span>
+                    <span class="command-description">
+                        Launch the raid after players join.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/event raid stop</span>
+                    <span class="command-description">
+                        Stop the active raid.
+                    </span>
+                </div>
+
             </div>
 
-            <div class="command">
-                <span class="command-name">/rps</span>
-                <span class="command-description">
-                    Play Rock Paper Scissors against the bot.
-                </span>
+        </div>
+
+
+        <!-- COMMUNITY -->
+
+        <div class="command-category reveal">
+
+            <div class="category-heading">
+                <span class="category-heading-icon">👤</span>
+
+                <div>
+                    <span class="eyebrow">COMMUNITY</span>
+                    <h2>Server</h2>
+                </div>
             </div>
 
-            <div class="command">
-                <span class="command-name">/afk</span>
-                <span class="command-description">
-                    Set your AFK status.
-                </span>
+            <div class="command-list">
+
+                <div class="command">
+                    <span class="command-name">/afk</span>
+                    <span class="command-description">
+                        Set your AFK status.
+                    </span>
+                </div>
+
+                <div class="command">
+                    <span class="command-name">/help</span>
+                    <span class="command-description">
+                        View Xeno's help information.
+                    </span>
+                </div>
+
             </div>
 
-            <div class="command">
-                <span class="command-name">/help</span>
-                <span class="command-description">
-                    View the bot's help information.
-                </span>
-            </div>
+        </div>
+
+
+        <div class="info-panel reveal">
+
+            <span class="eyebrow">COMMAND NOTE</span>
+
+            <h2>More commands are coming.</h2>
+
+            <p>
+                Xeno's command system will continue expanding as
+                new games, events and economy systems are added.
+            </p>
 
         </div>
 
@@ -155,11 +316,14 @@
         <div class="footer-links">
             <a href="features.html">Features</a>
             <a href="commands.html">Commands</a>
-            <a href="maintenance.html">Donate</a>
+            <a href="donate.html">Support</a>
         </div>
 
     </div>
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
