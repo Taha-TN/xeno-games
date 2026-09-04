@@ -130,6 +130,13 @@ body::before {
             transparent 90%
         );
 
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+
     z-index: -3;
 
     animation: gridMove 18s linear infinite;
@@ -262,6 +269,7 @@ h3 {
 
 /* =========================================================
    NAVBAR
+   MERGED / GLASS STYLE
 ========================================================= */
 
 .navbar {
@@ -275,17 +283,21 @@ h3 {
     width: 100%;
 
     background:
-        rgba(5,6,17,0.72);
+        linear-gradient(
+            180deg,
+            rgba(5,6,17,0.78),
+            rgba(5,6,17,0.55)
+        );
 
     border-bottom:
-        1px solid rgba(140,108,255,0.16);
+        1px solid rgba(140,108,255,0.12);
 
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(14px);
 
-    -webkit-backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(14px);
 
     box-shadow:
-        0 10px 40px rgba(0,0,0,0.18);
+        0 8px 35px rgba(0,0,0,0.12);
 }
 
 .nav-inner {
@@ -3083,6 +3095,30 @@ footer {
 
 
 @media (max-width: 650px) {
+
+    /* =========================================
+       MOBILE NAVBAR — STAYS MERGED WITH SITE
+    ========================================= */
+
+    .navbar {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5,6,17,0.78),
+                rgba(5,6,17,0.52)
+            );
+
+        border-bottom:
+            1px solid rgba(140,108,255,0.10);
+
+        box-shadow:
+            0 6px 25px rgba(0,0,0,0.10);
+
+        backdrop-filter: blur(14px);
+
+        -webkit-backdrop-filter: blur(14px);
+    }
 
     .nav-inner {
         min-height: 64px;
