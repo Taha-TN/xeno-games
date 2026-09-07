@@ -269,7 +269,6 @@ h3 {
 
 /* =========================================================
    NAVBAR
-   MERGED / GLASS STYLE
 ========================================================= */
 
 .navbar {
@@ -2182,37 +2181,134 @@ p {
 
 
 /* =========================================================
-   DONATION
+   DONATION / SUPPORT XENO
 ========================================================= */
 
 .donate-box {
+
+    position: relative;
 
     max-width: 850px;
 
     padding: 42px;
 
     border:
-        1px solid rgba(255,145,77,0.25);
+        1px solid rgba(140,108,255,0.28);
 
     border-radius: 18px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,145,77,0.08),
-            rgba(140,108,255,0.055),
+            rgba(53,231,255,0.055),
+            rgba(140,108,255,0.10),
             rgba(10,12,28,0.88)
         );
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.18);
+        0 20px 60px rgba(0,0,0,0.25),
+        0 0 45px rgba(140,108,255,0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.donate-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -35%;
+
+    width: 35%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--cyan),
+            var(--purple),
+            transparent
+        );
+
+    box-shadow:
+        0 0 18px rgba(53,231,255,0.65);
+
+    animation:
+        donationScan 4s linear infinite;
+}
+
+.donate-box::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -130px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,231,255,0.13),
+            transparent 68%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    animation:
+        donationGlow 5s ease-in-out infinite alternate;
+}
+
+.donate-box:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(53,231,255,0.42);
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,0.3),
+        0 0 45px rgba(53,231,255,0.09),
+        0 0 65px rgba(140,108,255,0.08);
 }
 
 .donate-box h2 {
+
+    position: relative;
+
+    z-index: 2;
+
     margin-bottom: 13px;
 }
 
+.donate-box p {
+
+    position: relative;
+
+    z-index: 2;
+}
+
 .support-status {
+
+    position: relative;
+
+    z-index: 2;
 
     display: inline-flex;
 
@@ -2225,20 +2321,28 @@ p {
     padding: 10px 14px;
 
     border:
-        1px solid rgba(255,145,77,0.25);
+        1px solid rgba(82,224,155,0.22);
 
     border-radius: 999px;
 
-    color: #ffc49e;
+    color: #9bf2c6;
 
     background:
-        rgba(255,145,77,0.06);
+        rgba(82,224,155,0.055);
 
-    font-family: "Orbitron", sans-serif;
+    font-family:
+        "Orbitron",
+        sans-serif;
 
     font-size: 0.58rem;
 
     letter-spacing: 0.08em;
+
+    box-shadow:
+        0 0 20px rgba(82,224,155,0.05);
+
+    animation:
+        supportPulse 3s ease-in-out infinite;
 }
 
 
@@ -2721,6 +2825,45 @@ footer {
 
 
 /* =========================================================
+   LEGAL LINKS
+========================================================= */
+
+.legal-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    margin-top: 15px;
+}
+
+.legal-links a {
+
+    color: #626985;
+
+    font-size: 0.68rem;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.legal-links a:hover {
+
+    color: var(--purple-soft);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
    SCROLL REVEAL
 ========================================================= */
 
@@ -2996,6 +3139,49 @@ footer {
     }
 }
 
+@keyframes donationScan {
+
+    0% {
+        left: -35%;
+    }
+
+    100% {
+        left: 135%;
+    }
+}
+
+@keyframes donationGlow {
+
+    from {
+        transform:
+            scale(0.85)
+            translate(0,0);
+
+        opacity: 0.55;
+    }
+
+    to {
+        transform:
+            scale(1.15)
+            translate(-15px,15px);
+
+        opacity: 1;
+    }
+}
+
+@keyframes supportPulse {
+
+    0%,100% {
+        box-shadow:
+            0 0 15px rgba(82,224,155,0.04);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(82,224,155,0.12);
+    }
+}
+
 @keyframes maintenanceFloat {
 
     0%,100% {
@@ -3097,7 +3283,7 @@ footer {
 @media (max-width: 650px) {
 
     /* =========================================
-       MOBILE NAVBAR — STAYS MERGED WITH SITE
+       MOBILE NAVBAR
     ========================================= */
 
     .navbar {
@@ -3244,6 +3430,15 @@ footer {
 
     .maintenance-info {
         grid-template-columns: 1fr;
+    }
+
+    .donate-box {
+        padding: 28px 22px;
+    }
+
+    .legal-links {
+        justify-content: flex-start;
+        gap: 9px 16px;
     }
 
     .footer-inner {
