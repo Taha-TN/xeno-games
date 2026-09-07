@@ -4,157 +4,312 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Support the development of Xeno Games.">
+    <title>Donate | Xeno</title>
+    <meta name="description" content="Support Xeno with a donation.">
 
-    <title>Support Xeno Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" href="style.css?v=5">
-    <script src="maintenance.js"></script>
-    
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(120, 60, 255, 0.25), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(0, 180, 255, 0.20), transparent 35%),
+                linear-gradient(135deg, #080014, #10002b 45%, #050014);
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Background glow */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            top: -180px;
+            left: -180px;
+            background: rgba(110, 50, 255, 0.12);
+            filter: blur(100px);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            right: -160px;
+            bottom: -160px;
+            background: rgba(0, 160, 255, 0.10);
+            filter: blur(100px);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(5, 0, 20, 0.35);
+            backdrop-filter: blur(12px);
+        }
+
+        .logo {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            background: linear-gradient(90deg, #a66cff, #4fc9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .back-btn {
+            color: #d8d0ff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 9px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            transition: 0.3s ease;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .back-btn:hover {
+            color: #ffffff;
+            border-color: rgba(150, 100, 255, 0.7);
+            background: rgba(130, 70, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        /* Main */
+        main {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 70px 20px;
+        }
+
+        .donation-card {
+            width: min(620px, 100%);
+            padding: 55px 45px;
+            text-align: center;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.045);
+            backdrop-filter: blur(18px);
+            box-shadow:
+                0 25px 80px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            animation: cardIn 0.8s ease forwards;
+        }
+
+        .heart {
+            width: 74px;
+            height: 74px;
+            margin: 0 auto 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            font-size: 34px;
+            background: linear-gradient(
+                135deg,
+                rgba(150, 80, 255, 0.22),
+                rgba(50, 180, 255, 0.15)
+            );
+            border: 1px solid rgba(170, 110, 255, 0.22);
+            box-shadow: 0 10px 35px rgba(100, 50, 255, 0.18);
+        }
+
+        h1 {
+            font-size: clamp(34px, 6vw, 52px);
+            margin-bottom: 17px;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #ffffff, #cdb8ff, #8bdcff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            max-width: 470px;
+            margin: 0 auto;
+            color: #bdb5d3;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .donate-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 230px;
+            margin-top: 35px;
+            padding: 15px 28px;
+            border-radius: 13px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            background: linear-gradient(90deg, #7d45ff, #258cff);
+            box-shadow:
+                0 10px 30px rgba(90, 60, 255, 0.28);
+            transition: 0.3s ease;
+        }
+
+        .donate-button:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 16px 40px rgba(90, 60, 255, 0.40);
+            filter: brightness(1.08);
+        }
+
+        .donate-button:active {
+            transform: translateY(-1px);
+        }
+
+        .thanks {
+            margin-top: 25px;
+            color: #817a99;
+            font-size: 13px;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 2;
+            padding: 22px;
+            text-align: center;
+            color: #68627c;
+            font-size: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .back-btn {
+                font-size: 13px;
+                padding: 8px 13px;
+            }
+
+            main {
+                padding: 45px 16px;
+            }
+
+            .donation-card {
+                padding: 42px 24px;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+            .donate-button {
+                width: 100%;
+                min-width: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="ambient ambient-one"></div>
-<div class="ambient ambient-two"></div>
-
-<nav class="navbar">
-    <div class="nav-inner">
-
+    <nav>
         <a href="index.html" class="logo">
-            XENO <span>GAMES</span>
+            <span>Xeno</span>
         </a>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="features.html">Features</a>
-            <a href="commands.html">Commands</a>
-            <a href="donate.html" class="active">Support</a>
+        <a href="index.html" class="back-btn">
+            ← Back
+        </a>
+    </nav>
 
-            <a
-                href="https://discord.com/oauth2/authorize?client_id=1537692246218899456"
-                target="_blank"
-                rel="noopener"
-                class="nav-cta"
-            >
-                Add to Discord
-            </a>
-        </div>
+    <main>
+        <section class="donation-card">
 
-    </div>
-</nav>
+            <div class="heart">
+                💜
+            </div>
 
+            <h1>Support Xeno</h1>
 
-<main>
-
-<section class="page-hero">
-    <div class="container reveal">
-
-        <span class="eyebrow">OPTIONAL SUPPORT</span>
-
-        <h1>
-            Help build
-            <span>Xeno.</span>
-        </h1>
-
-        <p>
-            Xeno Games is free to use. Optional support helps keep
-            development, hosting and future improvements moving.
-        </p>
-
-    </div>
-</section>
-
-
-<section class="section">
-    <div class="container">
-
-        <div class="donate-box support-box reveal">
-
-            <span class="eyebrow">SUPPORT THE PROJECT</span>
-
-            <h2>Donations are coming soon.</h2>
-
-            <p>
-                The donation system is currently being prepared.
-                Payment options will appear here once everything
-                is ready.
+            <p class="description">
+                If you enjoy Xeno and want to support the project,
+                you can make a donation below.
             </p>
 
-            <div class="support-status">
-                <span class="status-dot"></span>
-                DONATION SYSTEM OFFLINE
-            </div>
+            <a
+                href="https://www.chailink.co/taha-tn"
+                class="donate-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                💜 Make a Donation
+            </a>
 
-        </div>
+            <p class="thanks">
+                Thank you for supporting Xeno. ❤️
+            </p>
 
-    </div>
-</section>
+        </section>
+    </main>
 
-
-<section class="section compact-section">
-    <div class="container">
-
-        <div class="grid">
-
-            <div class="card reveal">
-                <div class="card-icon">🖥️</div>
-                <h3>Hosting</h3>
-                <p>
-                    Support helps keep Xeno's infrastructure running.
-                </p>
-            </div>
-
-            <div class="card reveal">
-                <div class="card-icon">⚙️</div>
-                <h3>Development</h3>
-                <p>
-                    Help fund new games, events and improvements.
-                </p>
-            </div>
-
-            <div class="card reveal">
-                <div class="card-icon">🚀</div>
-                <h3>Future Features</h3>
-                <p>
-                    Contributions can help Xeno continue expanding.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<div class="container">
-    <div class="ad-slot reveal">
-        Advertisement
-    </div>
-</div>
-
-</main>
-
-
-<footer>
-    <div class="footer-inner">
-
-        <div class="footer-text">
-            © 2026 Taha (TN). Xeno Games. Built for Discord communities.
-        </div>
-
-        <div class="footer-links">
-            <a href="features.html">Features</a>
-            <a href="commands.html">Commands</a>
-            <a href="donate.html">Support</a>
-        </div>
-
-    </div>
-</footer>
-
-
-<script src="script.js"></script>
+    <footer>
+        © 2026 Xeno. All rights reserved.
+    </footer>
 
 </body>
 </html>
